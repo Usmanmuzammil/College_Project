@@ -383,7 +383,7 @@
                         </li>
 
                         <li class="nav-item "  style="margin-top: -10px;">
-                            <a class="nav-link " href="{{ url('/admin/user/individual-user') }}">
+                            <a class="nav-link " href="{{ url('/admin/user/') }}">
                                 <i class="ri-dashboard-2-fill"></i></i> <span>Users</span>
                             </a>
                         </li>

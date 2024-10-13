@@ -2,16 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
-class HomeController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
-     */
-    public function index()
+   */
+    public function index(Request $request)
     {
-        return view('admin.auth.dashboard');
+        if ($request->ajax()) {
+            $data = User::select('*');
+
+            return DataTables::of($data)
+            ->addColumn('actions',function ($row) {
+                $statusText = ($row->status == 1) ? 'Active' : 'InActive';
+                $badgeClass = ($row->status == 1) ? 'success' : 'danger';
+                return '<td>
+                       <span class="badge bg-'.$badgeClass.'">'.$statusText.'</span>
+                </td>';
+            })
+
+                // ->addColumn('actions', function ($data){
+                //     return view('admin.users.action_modal',compact('data'));
+
+                // })
+                ->rawColumns(['actions'])
+                ->make(true);
+        }
+
+        return view('admin.users.index');
     }
 
     /**
