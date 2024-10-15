@@ -31,7 +31,11 @@
         <div class="row align-items-center py-4 px-xl-5">
             <div class="col-lg-3">
                 <a href="" class="text-decoration-none">
-                    <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
+                    <div style="display: flex; align-items: center;">
+                        <img src="{{ asset('webisteassets/img/GDC-Logo.png') }}" alt="" width="100px;">&nbsp;
+                        <h4 class="ml-2"><span class="text-primary">Govt:</span> Degree College & PGC Center</h4>
+                    </div>
+
                 </a>
             </div>
             <div class="col-lg-3 text-right">
@@ -93,26 +97,27 @@
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
-                        <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
+                    <a href="/courses" class="text-decoration-none d-block d-lg-none">
+                        {{-- <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1> --}}
+                        <img src="{{ asset('webisteassets/img/GDC-Logo.png') }}" alt="">
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="course.html" class="nav-item nav-link">Courses</a>
-                            <a href="teacher.html" class="nav-item nav-link">Teachers</a>
+                            <a href="/" class="nav-item nav-link active">Home</a>
+                            <a href="about" class="nav-item nav-link">About</a>
+                            <a href="courses" class="nav-item nav-link">Courses</a>
+                            <a href="teachers" class="nav-item nav-link">Teachers</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="blog.html" class="dropdown-item">Blog List</a>
-                                    <a href="single.html" class="dropdown-item">Blog Detail</a>
+                                    <a href="blog" class="dropdown-item">Blog List</a>
+                                    {{-- <a href="single" class="dropdown-item">Blog Detail</a> --}}
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="contact" class="nav-item nav-link">Contact</a>
                         </div>
                         <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
                     </div>
