@@ -6,7 +6,22 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('layout.webistelayout');
+    return view('webiste.home');
+});
+Route::get('/about',function() {
+    return view('webiste.about');
+});
+Route::get('/courses',function() {
+    return view('webiste.courses');
+});
+Route::get('/teachers',function() {
+    return view('webiste.teachers');
+});
+Route::get('/blog',function() {
+    return view('webiste.blog');
+});
+Route::get('/contact',function() {
+    return view('webiste.contact');
 });
 
 
